@@ -8,8 +8,15 @@ Husk, at du ikke må arbejde på din opgave mellem kl. 16:00 og kl. 8:00.
 
 ## Dag 1
 
-Morgen - (tidspunkt)  
-Eftermiddag - (tidspunkt)
+Morgen - (10:26)
+startede med at lave min next app
+
+lavede log in folders og logout folders
+
+
+Eftermiddag - (13:37)
+
+arbjedede på home page og hero
 
 ## Dag 2
 
