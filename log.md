@@ -29,7 +29,13 @@ i dag har jeg arbjedede hjemme og har lavede de vigtige komponenter til home pag
  -- redirect til /login
 
 
-Eftermiddag - (tidspunkt)
+Eftermiddag - (15:44)
+
+arbjedede på min user og group, som desværre ikke virkede men prøver igen i morgen :)
+
+har lidt problemer med at den ikke kan finde user men jeg tænker det er noget det nok skal være nemt i morgen, jeg synes det har været en produktivt dag der hjemme, det var som om jeg kunne næsten fokusere mere på det.
+
+i morgen håber jeg jeg kan få både users (medlem og instruktør ) til at virke og andre ting some styling på det hele.
 
 ## Dag 3
 
