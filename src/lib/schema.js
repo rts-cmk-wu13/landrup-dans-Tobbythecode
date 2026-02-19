@@ -1,6 +1,6 @@
 import { z } from "zod"
 
 export const loginSchema = z.object({
-    email: z.email("Indtast en gyldig email adresse."),
+    username: z.string("Indtast en gyldig brugernavn."),
     password: z.string().min(6, "Password skal være mindst 6 karakterer.")
 })
