@@ -1,31 +1,35 @@
 "use server"
+
+
+import { redirect } from "next/navigation"
 import { z } from "zod"
 import { cookies } from "next/headers"
-import { redirect } from "next/navigation"
 import { loginSchema } from "../../lib/schema"
 
-
 export async function loginUser(prevState, formData) {
-    
+
     const cookieStore = await cookies()
     const username = formData.get("username")
     const password = formData.get("password")
-    
+    console.log(username, password);
 
     if (username === prevState.values.username && password === prevState.values.password) {
-        return prevState // no change
+        return prevState // no changes
     }
 
-    const result = loginSchema.safeParse({username, password})
+
+    const result = loginSchema.safeParse({ username, password })
+
     if (!result.success) {
-        console.log(z.flattenError(result.error).fieldErrors)
+        console.log(z.flattenError(result.error).fieldErrors);
+
         return {
             values: { username, password },
             errors: z.flattenError(result.error).fieldErrors
         }
-    }
 
-    const response = await fetch("http://localhost:4000/auth/login", {
+    }
+    const response = await fetch("http://localhost:4000/auth/token", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -33,21 +37,18 @@ export async function loginUser(prevState, formData) {
         body: JSON.stringify({ username, password })
     })
 
-    if (!response.ok) {
-
+    if(!response.ok){
         return {
             values: { username, password },
-            errors: { form: ["Forkert brugernavn eller adgangskode."] }
+            errors: { form: ["Login failed. Please check your credentials and try again."] }
         }
     }
 
-    //console.log(response)
     const data = await response.json()
-    console.log(data)
+    console.log(data);
 
-    cookieStore.set("accessToken", data.accessToken)
+    cookieStore.set("authToken", data.accessToken)
     cookieStore.set("username", data.name)
-
-    return redirect("/")
-
+    
+    return redirect("/profile")
 }
