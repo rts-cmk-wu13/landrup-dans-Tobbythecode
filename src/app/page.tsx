@@ -1,18 +1,15 @@
-import Image from "next/image";
+
+import Hero from "@/components/hero/hero"
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-          <h1>forsiden</h1>
-                <Image
-          className="dark:invert"
-          src="/heroimg.jpg"
-          alt="Hero image"
-          width={100}
-          height={20}
-          priority
-        />
+    <div className="flex min-h-screen items-center justify-center  font-sans ">
+      <main className="flex min-h-screen max-w-3xl flex-col items-center justify-evenly py-32 px-16">
+          <Hero />
+    <Link href="/login" className="mt-10 rounded bg-white px-4 py-2 text-black hover:bg-blue-600">
+      Login
+    </Link>
       </main>
     </div>
   );
