@@ -20,7 +20,15 @@ arbjedede på home page og hero
 
 ## Dag 2
 
-Morgen - (tidspunkt)  
+Morgen - (11:41)  
+
+i dag har jeg arbjedede hjemme og har lavede de vigtige komponenter til home page som:
+
+ -- hero
+
+ -- redirect til /login
+
+
 Eftermiddag - (tidspunkt)
 
 ## Dag 3
