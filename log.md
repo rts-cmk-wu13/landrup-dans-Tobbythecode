@@ -39,8 +39,24 @@ i morgen håber jeg jeg kan få både users (medlem og instruktør ) til at virk
 
 ## Dag 3
 
-Morgen - (tidspunkt)  
-Eftermiddag - (tidspunkt)
+Morgen - (13:48)  
+
+lige nu er det lidt hårdt, arbejder stadig med login og det men føler at det snart virker, problemet er at values ikke bliver gemt så jeg aldrig rigtig logger ind,
+
+men indtil videre har jeg dog organiserede mine ting lidt mere og jeg har lavede lidt på home pagen.
+
+Eftermiddag - (15:54)
+
+jeg fik ikke min log til at fuldkommen virke, men den er der næsten
+jeg har dog fået aktiviteter til at fungere og virke også med dens id, så det er noget jeg er lidt stolt af :D 
+
+jeg skrev dog rent faktisk lidt på selve log ind som gjorde den lidt mere fungerene ? (hvis man kan overhovede kalde det, det)
+
+på mandag krydser jeg seriøst fingre på at jeg kan få login til at fungere (skal nok spørge carsten) 
+
+det skal nok blive bedre !
+
+
 
 ## Dag 4
 
