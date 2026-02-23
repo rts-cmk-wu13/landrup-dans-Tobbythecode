@@ -1,7 +1,6 @@
 
-import Hero from "@/components/hero/hero"
-
-import Hold from "@/components/hold/hold"
+import Hold from "./components/hold/hold";
+import Hero from "./components/hero/hero";
 import Image from "next/image"
 export default function Home() {
   return (
