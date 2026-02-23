@@ -18,7 +18,7 @@ export default async function ActivitiesPage() {
 
     return (
         <main>
-            <h1 className="mb-4">Aktiviteter</h1>
+            <h1 className="mb-4 text-left text-2xl font-bold">Aktiviteter</h1>
             <section className="columns-1">
             {activities.map(activity => (
                 <BlogCard activity={activity} key={activity.id} />
