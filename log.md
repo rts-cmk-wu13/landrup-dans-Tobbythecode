@@ -60,8 +60,18 @@ det skal nok blive bedre !
 
 ## Dag 4
 
-Morgen - (tidspunkt)  
-Eftermiddag - (tidspunkt)
+Morgen - (14:42)  
+
+
+fik endelig min footer til at se korrekt ud, prøver at arbjede lidt på de andre ting some visuelle ting og det.
+
+Eftermiddag - (15:53)
+
+skriver dette ret hurtig da jeg mangler at commit men,
+
+fik fiksede min activityid og stylede lidt på den (gør resten i morgen)
+
+håber på jeg kan få login fiksede imorgen.
 
 ## Dag 5
 
