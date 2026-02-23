@@ -1,5 +1,5 @@
 import { getAllActivities } from "@/lib/dal";
-import BlogCard from "@/components/BlogCard/Blog.jsx";
+import BlogCard from "../components/BlogCard/Blog.jsx";
 
 export default async function ActivitiesPage() {
 
