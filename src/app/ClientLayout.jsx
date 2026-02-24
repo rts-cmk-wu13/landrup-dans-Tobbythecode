@@ -1,13 +1,16 @@
-"use client"; 
+"use client";
 
-import { ThemeProvider } from "next-themes";
+
 import Footer from "./components/Footer.jsx";
+import { usePathname } from "next/navigation";
 
 export default function ClientLayout({ children }) {
+  const pathname = usePathname();
+
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+<>
       <div className="pb-20">{children}</div>
-      <Footer />
-    </ThemeProvider>
+      {pathname !== "/login" && <Footer />}
+</>
   );
 }
