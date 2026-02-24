@@ -48,19 +48,19 @@ const authToken = cookieStore.get("authToken")
     return await response.json()
 }
 
-// export async function getUserWithActivities(userId, authToken) {
+export async function getUserWithActivities(userId, authToken) {
     
-//     const response = await fetch(`http://localhost:4000/api/v1/users/${userId}`, {
-//         method: "GET",
-//         headers: {
-//             "Content-Type": "application/json",
-//             Authorization: `Bearer ${authToken}`
-//         }
-//     });
-//     if (!response.ok) {
-//     const errorText = await response.text();
-//     console.error("Fetch failed:", response.status, errorText);
-//     throw new Error("Failed to fetch user");
-//     }
-//     return await response.json();
-// }
+    const response = await fetch(`http://localhost:4000/api/v1/users/${userId}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`
+        }
+    });
+    if (!response.ok) {
+    const errorText = await response.text();
+    console.error("Fetch failed:", response.status, errorText);
+    throw new Error("Failed to fetch user");
+    }
+    return await response.json();
+}
