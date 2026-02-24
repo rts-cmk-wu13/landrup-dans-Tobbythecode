@@ -42,13 +42,11 @@ export async function loginUser(prevState, formData) {
         }
     }
 
-    //console.log(response)
-    const data = await response.json()
-    console.log(data)
+const data = await response.json()
+    console.log(data);
 
-    cookieStore.set("authToken", data.accessToken)
-    cookieStore.set("username", data.name)
-    
+    cookieStore.set("authToken", data.token)
+    cookieStore.set("username", data.userId)
+
     return redirect("/profile")
-
 }
