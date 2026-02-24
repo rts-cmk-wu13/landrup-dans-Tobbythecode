@@ -75,5 +75,18 @@ håber på jeg kan få login fiksede imorgen.
 
 ## Dag 5
 
-Morgen - (tidspunkt)  
-Eftermiddag - (tidspunkt)
+Morgen - (13:13)  
+
+efter 5 dages arbjede, fik vi endelig login og profil til at virke (hold ad op), jeg tager det næsten som en sejr, men det undskylder ikke hvor lang tid the tog, og jeg har også aktiviteter at arbejde med de sidste 3 timer.
+
+
+Eftermiddag - (15:45)
+
+
+wow, dette var noget af en opgave, som desværre ikke kunne blive fuldført, jeg er næsten skuffede i mig selv over det, der var dog mange ting som jeg føler kunne have blivet ændret, eller endda forklaret bedre.
+
+jeg fik login til at virkelig virke denne her gang og fik aktiviteter som medlemmer allerede havde komme fræm.
+
+jeg **Prøvede** at lave en join knap men jeg havde ikke nok tid til at fuldføre det.
+
+carsten sadge vi gik igennem det sammen efter som jeg håber ville give lidt indsigt til opgaven.
