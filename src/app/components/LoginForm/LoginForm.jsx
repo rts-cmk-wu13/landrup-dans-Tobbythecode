@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Hero from "@/components/hero/hero"
+import Hero from "../../components/hero/hero"
 import { useActionState } from "react"
 import { loginUser } from "./action"
 
@@ -14,7 +14,7 @@ errors: undefined
 export default function LoginForm() {
 
 const [state,formAction, isPending] = useActionState(loginUser, initialState)
-
+console.log(state)  
   return (
     <>
       <Hero />
