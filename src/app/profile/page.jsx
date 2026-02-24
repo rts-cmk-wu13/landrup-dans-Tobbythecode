@@ -1,45 +1,59 @@
-import { cookies } from "next/headers"
 import Image from "next/image"
+import Link from "next/link"
+import { cookies } from "next/headers";
+import { getUsersById, getUserWithActivities } from "../../lib/dal";
 
-export default async function ProfilePage({ params }) {
-  const { id } = params
+export default async function Profilepage() {
+    const cookieStore = await cookies()
+const authToken = cookieStore.get("authToken")?.value;
+    const userId = cookieStore.get('username')?.value;
+    const user = await getUserWithActivities(userId, authToken);
+    
 
-  const cookieStore = await cookies() 
-  const authToken = cookieStore.get("authToken")?.value
 
-  if (!authToken) {
-    return <h1 className="text-center">Not logged in</h1>
-  }
+    const activities = Array.isArray(user.activities) ? user.activities : [];
 
-  const response = await fetch(
-    `http://localhost:4000/api/v1/users/${id}`,
-    {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${authToken}`
-      },
-      cache: "no-store"
-    }
-  )
+    const sectionTitle =
+        user.role === "instruktør" || user.role === "instructor"
+            ? "Mine hold"
+            : "Tilmeldte hold";
 
-if (response.ok) {
-  window.location.href = "/profile" // manually redirect after success
-} else {
-  const data = await response.json()
-  setErrors({ form: data.error })
-}
-  const user = await response.json()
-
-  return (
-    <>
-      <h1 className="text-center">Min profil</h1>
-
-      <section className="flex flex-col items-center bg-white">
-        <Image src="/user.svg" alt="User profile" width={100} height={100} priority />
-
-        <p>Name: {user.firstname} {user.lastname}</p>
-        <p>Age: {user.age}</p>
-      </section>
-    </>
-  )
+    return (
+        <>
+            <div className="bg-[#003645] text-white py-3 text-center text-lg font-semibold">
+                Min profil
+            </div>
+            <div className="bg-white w-full flex flex-col items-center py-6 shadow">
+                <Image src="/user.svg" alt="User profile" width={80} height={80} priority />
+                <h2 className="mt-2 text-xl font-bold text-[#003645]">
+                    {user.firstname} {user.lastname}
+                </h2>
+                <p className="text-[#003645] text-sm">{user.role}</p>
+            </div>
+            <div className="w-full bg-[#003645] text-white px-4 py-2 flex items-center justify-between mt-4">
+                <span className="font-semibold">{sectionTitle}</span>
+            </div>
+          {user.role !== "instruktør" && user.role !== "instructor" && (
+  <ul className="flex flex-wrap gap-4">
+    {activities.map(activity => (
+      <li key={activity.id}>
+        <div className="bg-[#cfd8dc] rounded-xl p-6 max-w-xs shadow-md border-4 border-[#003645]">
+          <div className="mb-4">
+            <div className="text-2xl font-bold text-[#003645]">{activity.name}</div>
+            <div className="text-[#003645] text-lg mt-2">
+              {activity.weekday} kl. {activity.time}
+            </div>
+          </div>
+          <button
+            className="bg-[#003645] text-white rounded-lg px-8 py-2 shadow-md font-medium text-lg transition "
+          >
+            Vis hold
+          </button>
+        </div>
+      </li>
+    ))}
+  </ul>
+)}
+        </>
+    );
 }
